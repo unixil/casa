@@ -1,0 +1,63 @@
+* process description
+##########################################################################
+ Features Tested:                                                       
+    The script illustrates end-to-end processing with CASA             
+    as depicted in the following flow-chart.                           
+                                                                       
+    Filenames will have the <prefix> = 'ngc5921.demo'                  
+                                                                       
+    Input Data           Process          Output Data                  
+                                                                       
+   NGC5921.fits --> importuvfits  -->  <prefix>.ms   +                 
+   (1.4GHz,               |            <prefix>.ms.flagversions        
+    63 sp chan,           v                                            
+    D-array)           listobs    -->  casapy.log                      
+                          |                                            
+                          v                                            
+                     flagautocorr                                      
+                          |                                            
+                          v                                            
+                        setjy                                          
+                          |                                            
+                          v                                            
+                       bandpass   -->  <prefix>.bcal                   
+                          |                                            
+                          v                                            
+                       gaincal    -->  <prefix>.gcal                   
+                          |                                            
+                          v                                            
+                      fluxscale   -->  <prefix>.fluxscale              
+                          |                                            
+                          v                                            
+                      applycal    -->  <prefix>.ms                     
+                          |                                            
+                          v                                            
+                        split     -->  <prefix>.cal.split.ms           
+                          |                                            
+                          v                                            
+                        split     -->  <prefix>.src.split.ms           
+                          |                                            
+                          v                                            
+                    exportuvfits  -->  <prefix>.split.uvfits           
+                          |                                            
+                          v                                            
+                      uvcontsub   -->  <prefix>.ms.cont +              
+                          |            <prefix>.ms.contsub             
+                          v                                            
+                        clean     -->  <prefix>.clean.image +          
+                          |            <prefix>.clean.model +          
+                          |            <prefix>.clean.residual         
+                          v                                            
+                     exportfits   -->  <prefix>.clean.fits             
+                          |                                            
+                          v                                            
+                       imhead     -->  casapy.log                      
+                          |                                            
+                          v                                            
+                       imstat     -->  xstat (parameter)               
+                          |                                            
+                          v                                            
+                      immoments   -->  <prefix>.moments.integrated +   
+                          |            <prefix>.moments.weighted_coord 
+                          v                                            
+##########################################################################
