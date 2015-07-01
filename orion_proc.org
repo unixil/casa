@@ -1,0 +1,23 @@
+* concat
+** description
+The job is to concat several continuum spectral into a singal one and
+then do the image construction.
+This is an old way to do the job. In old days, interferometry don't
+have special continuum observation because the time is precious, so
+scientists extract continuum spectral to generate image to gain more
+information, but now alma have special time to make continuum
+observation so we don't need to extract continuum spectral from
+discrete spectral.
+
+I do the concat using the continuum extracted from discrete spectral
+which was done by Lei Zhu. The purpose of doing this is to check if
+the quality of image constructed this is worse than the quality of image
+constructed from the special continuum spectral.  
+*** continuum 
+This concept is a little confusing because the continuum spectral is
+not a real spectrum, it is a 2D image that has lm-plane and ignore the
+3rd frequency dimmension. Because the spectral window width is usually
+not very wide (eg. ~GHz), it is small compared to the whole spectral
+window width that usually several hundred GHz width, so you can still
+consider it as a point that the flux does not change in the range
+according to the frequency.
