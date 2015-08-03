@@ -1,0 +1,6 @@
+* contact
+- brian' email: bkirk@nrao.edu
+* cluster usage
+- connect from home: ssh login.cv.nrao.edu
+- connect to nodes service: ssh cvpost-master
+- apply nodes command: nodeschedular --request #ofdays #ofnodes
