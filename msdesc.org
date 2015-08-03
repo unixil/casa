@@ -1,0 +1,10 @@
+* scan
+* Field
+** RA
+** DE
+** FieldID
+** FieldName
+** EPoch
+* nRows
+* spwIDs
+* Average Interval

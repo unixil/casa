@@ -1,0 +1,28 @@
+* 2016/6/23
+** DONE copy *.ms to data/casa/16272/msfile
+** DONE copy *.fits to data/casa/16272/msfile
+** DONE set prefix=iras16272.CO set 
+msfile=prefix+'.ms' 
+btable=prefix+'.bcal'
+gtable=prefix+'.gcal'
+ftable=prefix+'.fcal'
+splitms=prefix+'.splitms'
+imname=prefix+'.cleanim'
+** DONE importuvfits(*.fits)
+FAILED!
+** DONE compare new ms with old ms file
+FAILED!
+** suppose the ms file are the original file
+** DONE setjy()
+FAILED!
+*** standard
+|Perley-Butler 2010 |no|
+|Perley-Butler 2013|no|
+|Perley-Taylor 99|no|
+|Perley-Taylor 95|no|
+|Perley 90|no|
+|Baars|no|
+|Scaife-Heald 2012|no|
+** TODO bandpass
+*** DONE plotms to check amplitude and phase
+
